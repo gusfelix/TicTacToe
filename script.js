@@ -1,10 +1,12 @@
-//var player = document.querySelector('input[name="player"]:checked').value;
 var player;
 var bot;
 var numJog = 0;
 var venceu = false;
 var pontDog = 0, pontCat = 0;
 
+function habilitarInicio(){
+    document.getElementById("iniciar").disabled = false;
+}
 
 function selecionarIcon(id){ //mudar o background do player selecionado
 
@@ -105,9 +107,7 @@ function checkjogo(id){
 }
 
 function jogoDoPc(){
-    if(verificarSrc('c5') ==  "transp.png"){
-        return 'c5';
-    }
+
     return 'c' + Math.floor((Math.random() * 9) + 1);
 }
 
